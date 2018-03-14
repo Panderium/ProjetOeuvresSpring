@@ -9,7 +9,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/addAdherent">Ajout un adhérent</a></li>
             <li><a href="/listAdherent">Lister les adhérents</a></li>
-            <li><a href="#">Ajouter une oeuvre</a></li>
+            <li><a href="/addOeuvre">Ajouter une oeuvre</a></li>
             <li><a href="/catalogue">Consulter le catalogue</a></li>
             <li><a href="#">Confirmer les réservations</a></li>
             <li><a href="#">Quitter</a></li>

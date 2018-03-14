@@ -1,7 +1,9 @@
 package com.panderium.projetoeuvres.controller;
 
 import com.panderium.projetoeuvres.model.OeuvreVente;
+import com.panderium.projetoeuvres.model.Proprietaire;
 import com.panderium.projetoeuvres.service.IOeuvresService;
+import com.panderium.projetoeuvres.service.IProprietaireService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -20,18 +22,29 @@ public class OeuvresController {
     @Autowired
     private IOeuvresService oeuvresService;
 
+    @Autowired
+    private IProprietaireService proprietaireService;
+
     @RequestMapping(value = "/addOeuvre", method = RequestMethod.GET)
     public ModelAndView displayAddOeuvre() {
-        return new ModelAndView("ajouterOeuvre", "oeuvre", new OeuvreVente());
+        ModelAndView model = new ModelAndView("ajouterOeuvre", "oeuvre", new OeuvreVente());
+        model.addObject("proprietaires", proprietaireService.listAll());
+        return model;
     }
 
-    @RequestMapping(value = "/insertOeuvre", method = RequestMethod.GET)
+    @RequestMapping(value = "/insertOeuvre", method = RequestMethod.POST)
     public String addOeuvre(Model model,
-                            @Valid @ModelAttribute("oeuvre")OeuvreVente oeuvreVente,
+                            @Valid @ModelAttribute("oeuvre") OeuvreVente oeuvreVente,
                             BindingResult result) {
         if (result.hasErrors()) {
             return "erreur";
         }
+        model.addAttribute("titreOeuvrevente", oeuvreVente.getTitreOeuvrevente());
+        model.addAttribute("prixOeuvrevente", oeuvreVente.getPrixOeuvrevente());
+        model.addAttribute("proprietaire", oeuvreVente.getProprietaire());
+        oeuvreVente.setEtatOeuvrevente("L");
+        System.err.println(oeuvreVente.getProprietaire());
+        oeuvresService.add(oeuvreVente);
         return "index";
     }
 
