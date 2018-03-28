@@ -2,16 +2,16 @@
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8" %>
-<!DOCTYPE html>
-<html>
-<head>
-    <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Affichage de tous les adhérents</title>
-</head>
+
+<jsp:include page="header.jsp">
+    <jsp:param name="title" value="Affichage de tous les adhérents"/>
+</jsp:include>
+
 <body>
 
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp">
+    <jsp:param name="active" value="listerAdherent.jsp"/>
+</jsp:include>
 
 <div class="container">
 <h2>Tableau des Adhérents</h2>

@@ -16,7 +16,9 @@
 
 
 <body>
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp">
+    <jsp:param name="active" value="ajouterOeuvre.jsp"/>
+</jsp:include>
 
 <br>
 <br>

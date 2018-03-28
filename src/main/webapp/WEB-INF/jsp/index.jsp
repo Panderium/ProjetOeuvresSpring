@@ -1,14 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
-<!DOCTYPE>
-<html>
-<head>
-    <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta http-equiv="refresh" content="0;URL=javascript:fermer();">
-    <title>Expo : Médiathèque De POLYTECH</title>
-</head>
 
+<jsp:include page="header.jsp">
+    <jsp:param name="title" value="Expo : Médiathèque De POLYTECH"/>
+</jsp:include>
 
 <script language="JavaScript">
     function fermer() {
@@ -17,7 +12,9 @@
 </script>
 
 <body>
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp">
+    <jsp:param name="active" value="index.jsp"/>
+</jsp:include>
 
 <p align="center">
     <font color="#004080" face="Arial" size="4">Gestion de

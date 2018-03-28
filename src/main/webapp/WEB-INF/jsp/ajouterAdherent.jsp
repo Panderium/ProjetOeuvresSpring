@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ajouter un adhérent</title>
+    <title>Ajouter un adhï¿½rent</title>
 </head>
 <SCRIPT language="Javascript" type="text/javascript">
     <
@@ -15,7 +15,9 @@
 
 
 <body>
-<jsp:include page="navbar.jsp"/>
+<jsp:include page="navbar.jsp">
+    <jsp:param name="active" value="ajouterAdherent.jsp"/>
+</jsp:include>
 
 <br>
 <br>
@@ -24,16 +26,16 @@
     <form:form method="POST" action="insertAdherent" modelAttribute="adherent">
         <div class="form-group">
             <form:label path="nomAdherent">Nom de l'adherent :</form:label>
-            <form:input class="form-control" type="text" path="nomAdherent" id="nom" placeholder="Nom Adhérent"/>
+            <form:input class="form-control" type="text" path="nomAdherent" id="nom" placeholder="Nom Adhï¿½rent"/>
         </div>
         <div class="form-group">
             <form:label path="prenomAdherent">Prenom de l'adherent :</form:label>
             <form:input class="form-control" type="text" path="prenomAdherent" id="prenom"
-                        placeholder="Prénom Adhérent"/>
+                        placeholder="Prï¿½nom Adhï¿½rent"/>
         </div>
         <div class="form-group">
             <form:label path="villeAdherent">Ville de l'adherent :</form:label>
-            <form:input class="form-control" type="text" path="villeAdherent" id="ville" placeholder="Ville Adhérent"/>
+            <form:input class="form-control" type="text" path="villeAdherent" id="ville" placeholder="Ville Adhï¿½rent"/>
         </div>
         <button type="submit" class="btn btn-default">Ajouter</button>
     </form:form>

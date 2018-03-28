@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
          pageEncoding="UTF-8"%>
+
+<!-- Tester valeur du param "active", actuellement contient le nom de la page -->
+
 <nav class="navbar navbar-default">
     <div class="container-fluid">
         <div class="navbar-header">
