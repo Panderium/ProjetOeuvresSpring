@@ -1,12 +1,10 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ajouter une oeuvre</title>
-</head>
+<jsp:include page="header.jsp">
+    <jsp:param name="title" value="Ajouter une oeuvre"/>
+</jsp:include>
+
 <SCRIPT language="Javascript" type="text/javascript">
     <
     script

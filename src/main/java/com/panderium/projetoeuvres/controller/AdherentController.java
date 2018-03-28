@@ -33,10 +33,6 @@ public class AdherentController {
     	if (result.hasErrors()) {
     		return "erreur";
     	}
-        model.addAttribute("nomAdherent", adherent.getNomAdherent());
-        model.addAttribute("prenomAdherent", adherent.getPrenomAdherent());
-        model.addAttribute("villeAdherent", adherent.getVilleAdherent());
-        System.err.println(adherent.getVilleAdherent());
         adherentService.add(adherent);
         return "index";
     }

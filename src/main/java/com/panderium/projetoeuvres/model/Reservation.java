@@ -1,27 +1,23 @@
 package com.panderium.projetoeuvres.model;
 
+import com.panderium.projetoeuvres.tools.ReservationId;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.io.Serializable;
-import java.util.Date;
 
 @Data
 @Entity
-public class Reservation implements Serializable {
+@IdClass(ReservationId.class)
+public class Reservation {
 
     @Id
-    @ManyToOne
-    @JoinColumn(name = "id_oeuvrevente")
-    private OeuvreVente oeuvrevente;
+    private int idOeuvrevente;
 
     @Id
-    @ManyToOne
-    @JoinColumn(name = "id_adherent")
-    private Adherent adherent;
+    private int idAdherent;
 
     @Column(name = "date_reservation")
-    private Date date;
+    private String date;
 
     @Column(name = "statut")
     private String status;

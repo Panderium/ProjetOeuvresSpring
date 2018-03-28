@@ -22,4 +22,14 @@ public class OeuvresService implements IOeuvresService{
     public List<OeuvreVente> listAll() {
         return oeuvreVenteDao.findAll();
     }
+
+    @Override
+    public OeuvreVente findByIdOeuvrevente(int id) {
+        return oeuvreVenteDao.findByIdOeuvrevente(id);
+    }
+
+    @Override
+    public OeuvreVente findByTitreOeuvrevente(String titreOeuvreVente) {
+        return oeuvreVenteDao.findByTitreOeuvrevente(titreOeuvreVente);
+    }
 }

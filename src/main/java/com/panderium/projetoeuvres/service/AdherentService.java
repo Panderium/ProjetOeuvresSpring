@@ -22,4 +22,10 @@ public class AdherentService implements IAdherentService {
     public List<Adherent> listAll() {
         return adherentDao.findAll();
     }
+
+    @Override
+    public Adherent findByIdAdherent(int id) {
+        return adherentDao.findByIdAdherent(id);
+    }
+
 }

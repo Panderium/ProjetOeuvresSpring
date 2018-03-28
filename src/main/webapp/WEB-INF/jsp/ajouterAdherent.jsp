@@ -1,11 +1,9 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 
-<!DOCTYPE html>
-<html>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Ajouter un adh�rent</title>
-</head>
+<jsp:include page="header.jsp">
+    <jsp:param name="title" value="Ajouter un adhérent"/>
+</jsp:include>
+
 <SCRIPT language="Javascript" type="text/javascript">
     <
     script
