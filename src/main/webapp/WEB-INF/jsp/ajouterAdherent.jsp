@@ -14,7 +14,7 @@
 
 <body>
 <jsp:include page="navbar.jsp">
-    <jsp:param name="active" value="ajouterAdherent.jsp"/>
+    <jsp:param name="active" value="addAdherent.jsp"/>
 </jsp:include>
 
 <br>

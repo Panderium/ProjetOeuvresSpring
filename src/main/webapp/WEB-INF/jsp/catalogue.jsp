@@ -8,7 +8,7 @@
 <body>
 
 <jsp:include page="navbar.jsp">
-    <jsp:param name="active" value="catalogue.jsp"/>
+    <jsp:param name="active" value="catalogue"/>
 </jsp:include>
 
 <div class="container">

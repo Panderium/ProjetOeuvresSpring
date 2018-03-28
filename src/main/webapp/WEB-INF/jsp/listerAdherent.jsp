@@ -10,7 +10,7 @@
 <body>
 
 <jsp:include page="navbar.jsp">
-    <jsp:param name="active" value="listerAdherent.jsp"/>
+    <jsp:param name="active" value="listAdherent"/>
 </jsp:include>
 
 <div class="container">
