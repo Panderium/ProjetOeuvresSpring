@@ -3,5 +3,9 @@ package com.panderium.projetoeuvres.dao;
 import com.panderium.projetoeuvres.model.OeuvreVente;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface IOeuvreVenteDao extends JpaRepository<OeuvreVente, Long>{
+public interface IOeuvreVenteDao extends JpaRepository<OeuvreVente, Long> {
+
+    OeuvreVente findByIdOeuvrevente(int id);
+
+    OeuvreVente findByTitreOeuvrevente(String titreOeuvreVente);
 }

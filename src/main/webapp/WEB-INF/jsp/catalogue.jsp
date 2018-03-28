@@ -37,6 +37,17 @@
                 <td>${oeuvre.prixOeuvrevente}€</td>
                 <td>${oeuvre.proprietaire.nomProprietaire}</td>
                 <td>${oeuvre.proprietaire.prenomProprietaire}</td>
+                <td>
+                    <a href="#" class="btn btn-primary" role="button">Modifier</a>
+                    <c:choose>
+                        <c:when test="${oeuvre.etatOeuvrevente == 'L'}">
+                            <a href="/bookOeuvre?id=${oeuvre.idOeuvrevente}" class="btn btn-success active" role="button">Réserver</a>
+                        </c:when>
+                        <c:otherwise>
+                            <a href="#" class="btn disabled" role="button">Réserver</a>
+                        </c:otherwise>
+                    </c:choose>
+                </td>
             </tr>
         </c:forEach>
         </tbody>

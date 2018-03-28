@@ -9,4 +9,8 @@ public interface IOeuvresService {
     boolean add(OeuvreVente oeuvreVente);
 
     List<OeuvreVente> listAll();
+
+    OeuvreVente findByIdOeuvrevente(int id);
+
+    OeuvreVente findByTitreOeuvrevente(String titreOeuvreVente);
 }

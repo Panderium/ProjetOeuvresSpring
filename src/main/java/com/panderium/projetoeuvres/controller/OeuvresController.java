@@ -9,6 +9,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RequestAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
@@ -39,11 +40,7 @@ public class OeuvresController {
         if (result.hasErrors()) {
             return "erreur";
         }
-        model.addAttribute("titreOeuvrevente", oeuvreVente.getTitreOeuvrevente());
-        model.addAttribute("prixOeuvrevente", oeuvreVente.getPrixOeuvrevente());
-        model.addAttribute("proprietaire", oeuvreVente.getProprietaire());
         oeuvreVente.setEtatOeuvrevente("L");
-        System.err.println(oeuvreVente.getProprietaire());
         oeuvresService.add(oeuvreVente);
         return "index";
     }
@@ -54,4 +51,5 @@ public class OeuvresController {
         model.addAttribute("oeuvres", oeuvres);
         return "catalogue";
     }
+
 }

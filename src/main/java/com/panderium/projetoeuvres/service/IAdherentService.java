@@ -9,4 +9,6 @@ public interface IAdherentService {
     boolean add(Adherent adherent);
 
     List<Adherent> listAll();
+
+    Adherent findByIdAdherent(int id);
 }
