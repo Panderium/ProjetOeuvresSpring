@@ -14,6 +14,7 @@
     src = "js/foncControle.js" ></script>
 <link href="webjars/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
 <body>
+
 <jsp:include page="navbar.jsp">
     <jsp:param name="active" value="bookOeuvre.jsp"/>
 </jsp:include>
